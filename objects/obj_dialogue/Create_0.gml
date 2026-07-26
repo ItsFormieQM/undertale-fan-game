@@ -1,0 +1,10 @@
+//visible = false
+var _scale = 5
+image_xscale = _scale
+image_yscale = 1.75
+global.canmove = false
+global.msg[0] = "* You wonder what this is. "
+global.interacted = 0
+con = 0
+msg = 0
+global.msg[1] = noone
