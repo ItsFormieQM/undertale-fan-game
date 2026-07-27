@@ -286,6 +286,12 @@ if opened_sett == 1 {
         }
 		else if opened_sett_box == 4 {
 			scr_play_snd(snd_movemenu, 1.25, false);
+            obj_menuheart.y = _accounty + 133.5 + 15.5;
+            obj_menuheart.x = _accountx + 110; 
+            opened_sett_box = 5;
+		}
+		else if opened_sett_box == 5 {
+			scr_play_snd(snd_movemenu, 1.25, false);
             obj_menuheart.y = _accounty + 88.5;
             obj_menuheart.x = _accountx + 110; 
             opened_sett_box = 1;
@@ -298,22 +304,34 @@ if opened_sett == 1 {
         
         if opened_sett_box == 1 {
             scr_play_snd(snd_movemenu, 1.25, false);
-            obj_menuheart.y = _accounty + 118.5;
-            obj_menuheart.x = _accountx + 110; 
-            opened_sett_box = 3;
-        }
-        else if opened_sett_box == 2 {
-            scr_play_snd(snd_movemenu, 1.25, false);
-            obj_menuheart.y = _accounty + 88.5;
-            obj_menuheart.x = _accountx + 110; 
-            opened_sett_box = 1;
-        }
-        else if opened_sett_box == 3 {
-            scr_play_snd(snd_movemenu, 1.25, false);
             obj_menuheart.y = _accounty + 103.5;
             obj_menuheart.x = _accountx + 110; 
             opened_sett_box = 2;
         }
+        else if opened_sett_box == 2 {
+            scr_play_snd(snd_movemenu, 1.25, false);
+            obj_menuheart.y = _accounty + 118.5;
+            obj_menuheart.x = _accountx + 110; 
+            opened_sett_box = 3;
+        }
+        else if opened_sett_box == 3 {
+            scr_play_snd(snd_movemenu, 1.25, false);
+            obj_menuheart.y = _accounty + 133.5;
+            obj_menuheart.x = _accountx + 110; 
+            opened_sett_box = 4;
+        }
+		else if opened_sett_box == 4 {
+			scr_play_snd(snd_movemenu, 1.25, false);
+            obj_menuheart.y = _accounty + 133.5 + 15.5;
+            obj_menuheart.x = _accountx + 110; 
+            opened_sett_box = 5;
+		}
+		else if opened_sett_box == 5 {
+			scr_play_snd(snd_movemenu, 1.25, false);
+            obj_menuheart.y = _accounty + 88.5;
+            obj_menuheart.x = _accountx + 110; 
+            opened_sett_box = 1;
+		}
     }
 
     // TOGGLE SETTINGS SELECTIONS
@@ -381,5 +399,13 @@ if opened_sett == 1 {
 			}
 		}
 		
+	}
+	else if opened_sett_box == 5 {
+		if global.interacted == 1 {
+			scr_play_snd(snd_select, 1.25, false);
+			sel = 0
+			global.interacted = 0
+			global.no_mus = !global.no_mus
+		}
 	}
 }

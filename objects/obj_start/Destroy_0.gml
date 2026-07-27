@@ -10,4 +10,5 @@ if (variable_global_exists("target_x") && global.target_x != undefined) {
 if !file_exists("savedata.txt") {
 	audio_stop_all()
 	global.current_song = 0
+	scr_tempsave()
 }

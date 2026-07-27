@@ -135,3 +135,5 @@ if (room == room_ruin && instance_exists(obj_start)) {
 
 
 scr_genocide_init()
+
+scr_disable_mus()

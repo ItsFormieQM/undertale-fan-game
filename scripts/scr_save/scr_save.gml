@@ -1,5 +1,7 @@
 function scr_save(_instance){
     // 1. Open the file and store the handle ID
+	file_delete("savedata.txt")
+
     var _file = file_text_open_write("savedata.txt");
     
     var save_x = _instance.x;
@@ -14,6 +16,8 @@ function scr_save(_instance){
     var _str_lv   = string(global.lv);
     
     // Line 1: Write player X position
+	
+	
     file_text_write_string(_file, _str_x); 
     file_text_writeln(_file);
     

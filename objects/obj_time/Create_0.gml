@@ -29,6 +29,7 @@ global.gamepad_id = -1
 global.autorun = false
 global.show_solids = false
 global.is_fs = false
+global.no_mus = false
 scr_ifnintendo()
 if os_type == os_windows || os_type == os_linux || os_type == os_macosx {
 	global.osflavor = "PC"
@@ -77,6 +78,7 @@ global.item[6] = pointer_null
 global.item[7] = pointer_null
 
 scr_get_itemlist()
+
 
 
 

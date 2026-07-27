@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_framerate_balancer",
   "parent":{
-    "name":"triple t",
-    "path":"triple t.yyp",
+    "name":"Son",
+    "path":"folders/Son.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

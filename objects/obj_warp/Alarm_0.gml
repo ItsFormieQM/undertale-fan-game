@@ -1,6 +1,9 @@
 // Fetch the instance ID from the array dynamically using the slot we assigned
-var _my_target = global.warplist[target_slot];
-
+//var _my_target = 0
+if transition_room == true {
+	room_goto(_next_room)
+	
+}
 // Safety check: Make sure the target marker exists in the room layout
 if (_my_target != pointer_null && instance_exists(_my_target)) {
     with (obj_mainchara) {

@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_cantselect",
   "parent":{
-    "name":"triple t",
-    "path":"triple t.yyp",
+    "name":"Son",
+    "path":"folders/Son.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

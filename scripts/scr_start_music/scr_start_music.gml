@@ -7,7 +7,7 @@ function scr_start_music(music, vol, loop){
 			audio_play_sound(music,priority,loop)
 		}
 		if global.osflavor == "Mobile" {
-			audio_sound_gain(music,vol+0.25,0)
+			audio_sound_gain(music,vol+0.5,0)
 		}
 		else {
 			audio_sound_gain(music,vol,0)

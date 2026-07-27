@@ -96,6 +96,12 @@ if opened_sett == 1 {
 		
 		draw_set_colour(c_white)
 	}
+	if global.no_mus == false {
+		draw_text(_accountx + 120, _accounty + 95 + 45, "MUSIC: True")
+	}
+	else {
+		draw_text(_accountx + 120, _accounty + 95 + 45, "MUSIC: False")
+	}
 	 
 	if global.frame_rate == 30 && global.osflavor != "Mobile"{
 		draw_text(_accountx + 120, _accounty + 125 , "FPS: 30")
