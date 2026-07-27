@@ -13,6 +13,16 @@ opened_cell_box = 0
 opened_item = 0
 opened_item_box = 0
 can_change = 1
+sel = 0
+if global.frame_rate == 30 {
+	sel = 2
+}
+else if global.frame_rate == 60 {
+	sel = 0
+}
+else if global.frame_rate == 120 {
+	sel = 1
+}
 //audio_play_sound(snd_noise,67,false)
 instance_create_layer(_accountx + 32.5,_accounty + 99.5,"BATTLE", obj_menuheart)
 scr_play_snd(snd_movemenu, 1.25, false)

@@ -92,8 +92,47 @@ if opened_sett == 1 {
 	}
 	else {
 		draw_set_colour(c_grey)
-		draw_text(_accountx + 120, _accounty + 110 , "UNAVAILABLE")
+		draw_text(_accountx + 120, _accounty + 110 , "FULLSCREEN: LOCKED")
+		
+		draw_set_colour(c_white)
 	}
+	 
+	if global.frame_rate == 30 && global.osflavor != "Mobile"{
+		draw_text(_accountx + 120, _accounty + 125 , "FPS: 30")
+	}
+	else if global.frame_rate == 60 && global.osflavor != "Mobile" {
+		draw_text(_accountx + 120, _accounty + 125 , "FPS: 60")
+	}
+	else if global.frame_rate == 120 && global.osflavor != "Mobile" {
+		draw_text(_accountx + 120, _accounty + 125 , "FPS: 120")
+	}
+	else if global.osflavor == "Mobile" {
+		draw_set_colour(c_grey)
+		draw_text(_accountx + 120, _accounty + 125 , "FPS: 60")
+		draw_set_colour(c_white)
+	}
+	
+	
+}
+if opened_item == 1 {
+	_offset = 10
+	draw_sprite_ext(spr_box, 0, _accountx + 175, _accounty + 136, 2.85,3.4,0,c_white,1)
+	draw_text(_accountx + 110 +_offset, _accounty + 50 +1, string(global.item[0]))
+	draw_text(_accountx + 110 +_offset, _accounty + 65 +1, string(global.item[1]))
+	draw_text(_accountx + 110+_offset, _accounty + 80+1, string(global.item[2]))
+	draw_text(_accountx + 110+_offset, _accounty + 95+1, string(global.item[3]))
+	draw_text(_accountx + 110+_offset, _accounty + 110+1, string(global.item[4]))
+	draw_text(_accountx + 110+_offset, _accounty + 125+1, string(global.item[5]))
+	draw_text(_accountx + 110+_offset, _accounty + 140+1, string(global.item[6]))
+	draw_text(_accountx + 110+_offset, _accounty + 155+1, string(global.item[7]))
+	draw_text(_accountx + 110+_offset, _accounty + 155 + 15+1, string(global.item[8]))
+	draw_text(_accountx + 110+_offset, _accounty + 155 + 15 * 2+1, string(global.item[9]))
+	draw_text(_accountx + 110+_offset, _accounty + 155 + 15 * 3+1, string(global.item[10]))
+	//draw_text(_accountx + 110+_offset, _accounty + 155 + 15 * 4, string(global.item[11]))
+	//draw_text(_accountx + 110, _accounty + 155 + 15 * 5, string(global.item[12]))
+	//draw_text(_accountx + 110, _accounty + 155 + 15 * 6, string(global.item[13]))
+	//draw_text(_accountx + 110, _accounty + 155 + 15 * 7, string(global.item[14]))
+	//draw_text(_accountx + 110, _accounty + 110, string(global.item[4]))
 }
 
 // 6. Restore system states

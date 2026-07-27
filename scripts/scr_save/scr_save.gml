@@ -37,7 +37,15 @@ function scr_save(_instance){
 	file_text_write_string(_file, string(global.genocide_route)); 
     file_text_writeln(_file);
 	
+	// autorun
 	file_text_write_string(_file, string(global.autorun)); 
+    file_text_writeln(_file);
+	
+	// fullscreen 
+	file_text_write_string(_file, string(global.is_fs)); 
+    file_text_writeln(_file);
+	//fps 
+	file_text_write_string(_file, string(global.frame_rate)); 
     file_text_writeln(_file);
     
     // Line 7: Create the validation hash using identical data ordering as scr_load

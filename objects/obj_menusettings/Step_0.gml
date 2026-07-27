@@ -162,10 +162,13 @@ if can_change == 1 {
         // ITEM Selected
         if box == 0 {
             show_debug_message("ITEM");
+			opened_item = 1
+			can_change = 0
+			menu_first = 0
         }
         
         // STAT Selected
-        if box == 1 {
+        else if box == 1 {
             show_debug_message("STAT");
             opened_stat = 1;
             if instance_exists(obj_menuheart) {
@@ -176,12 +179,12 @@ if can_change == 1 {
         }
         
         // CELL Selected
-        if box == 2 {
+        else if box == 2 {
             show_debug_message("CELL");
         }
         
         // SETTINGS Selected
-        if box == 3 {
+        else if box == 3 {
             opened_sett = 1;
             opened_sett_box = 1;
             if instance_exists(obj_menuheart) {
@@ -198,8 +201,18 @@ if can_change == 1 {
 
 // --- STEP 7: MENU NAVIGATION (SUB-MENU STAT & SETTINGS MODE) ---
 if can_change != 1 {
-    // Back out of STAT screen
-    if box == 1 {
+    
+	if box == 0 {
+		if global.interacted_x {
+			opened_item = 0
+			global.interacted_x = 0
+			menu_first = 1
+			scr_play_snd(snd_back, 0.65, false);
+			can_change = 1
+		}
+	}
+	// Back out of STAT screen
+    else if box == 1 {
         if global.interacted_x == 1 {
             if opened_stat == 1 {
                 opened_stat = 0;
@@ -216,7 +229,7 @@ if can_change != 1 {
     }
     
     // Back out of SETTINGS screen
-    if box == 3 {
+    else if box == 3 {
         if global.interacted_x == 1 {
             if opened_sett == 1 {
                 opened_sett = 0;
@@ -267,10 +280,16 @@ if opened_sett == 1 {
         }
         else if opened_sett_box == 3 {
             scr_play_snd(snd_movemenu, 1.25, false);
+            obj_menuheart.y = _accounty + 133.5;
+            obj_menuheart.x = _accountx + 110; 
+            opened_sett_box = 4;
+        }
+		else if opened_sett_box == 4 {
+			scr_play_snd(snd_movemenu, 1.25, false);
             obj_menuheart.y = _accounty + 88.5;
             obj_menuheart.x = _accountx + 110; 
             opened_sett_box = 1;
-        }
+		}
     }
     
     // MOVE UP (Gamepad Up)
@@ -333,4 +352,34 @@ if opened_sett == 1 {
 			}
         }
     }
+	else if opened_sett_box == 4 {
+		
+		if global.interacted == 1 {
+			global.interacted = 0
+			if global.osflavor != "Mobile"  {
+				if sel = 0 { // 0 is 60
+					game_set_speed(120,gamespeed_fps)
+					sel = 1
+					scr_play_snd(snd_select, 1.25, false);
+					global.interacted = 0
+				}
+				else if sel = 1 { // 1 is 120
+					game_set_speed(30,gamespeed_fps)
+					scr_play_snd(snd_select, 1.25, false);
+					sel = 2
+					global.interacted = 0
+				}
+				else if sel = 2 { 
+					game_set_speed(60,gamespeed_fps)
+					scr_play_snd(snd_select, 1.25, false);
+					sel = 0
+					global.interacted = 0
+				}
+			}
+			else {
+				scr_play_snd(snd_cantselect, 1.55, false);
+			}
+		}
+		
+	}
 }

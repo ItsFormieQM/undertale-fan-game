@@ -20,6 +20,8 @@ global.atk = 10
 global.def = 10
 global.xp = 0
 global.genocide_route = 0
+global.frame_rate = 60 // might go unused 
+global.item = []
 touch_x = 0
 touch_y = 0
 global.is_nx = false
@@ -48,7 +50,34 @@ for (var i = 0; i < 1024; i++) {
     global.warplist[i] = pointer_null;
 	global.msg[i] = pointer_null;
 }
+for (var i = 0; i < array_length(global.item); i++) {
+	global.item[i] = pointer_null
+}
 audio_channel_num(1024); 
+
+/* enums 
+	item_monstercandy - start at 0
+	item_friedpipis_ph
+	item_toastedbun
+	item_annoyingdog
+	item_memories
+	item_hopesanddreams
+*/
+for (var i = 0; i < 30; i++) {
+	global.item[i] = "used"
+}
+
+global.item[0] = "item_monstercandy"
+global.item[1] = pointer_null
+global.item[2] = "item_toastedbun"
+global.item[3] = "item_annoyingdog"
+global.item[4] = "item_memories"
+global.item[5] = "item_hopesanddreams"
+global.item[6] = pointer_null
+global.item[7] = pointer_null
+
+scr_get_itemlist()
+
 
 
 

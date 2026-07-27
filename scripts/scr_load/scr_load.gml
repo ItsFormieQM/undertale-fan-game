@@ -36,6 +36,17 @@ function scr_load(){
 	
 	global.autorun = bool(file_text_read_string(_file))
     file_text_readln(_file);
+	
+	var _is_fs = 0
+	_is_fs = bool(file_text_read_string(_file))
+	global.is_fs = _is_fs
+    file_text_readln(_file);
+	window_set_fullscreen(_is_fs)
+	var _fps
+	_fps = string(file_text_read_string(_file))
+	
+	file_text_readln(_file);
+	game_set_speed(_fps, gamespeed_fps)
     
     // Line 7: Read Saved Anti-Cheat Hash
     var _saved_hash = string_trim(file_text_read_string(_file));
