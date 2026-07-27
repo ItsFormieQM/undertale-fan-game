@@ -1,8 +1,30 @@
-- name: Build Game
-      uses: YoYoGames/GameMaker-Action@v1
-      with:
-        gms-version: '2026.0.0.23'
-        target: 'VM'
-      env:
-        YY_USERNAME: ${{ secrets.GAMEMAKER_USERNAME }}
-        YY_PASSWORD: ${{ secrets.GAMEMAKER_PASSWORD }}
+name: Build GameMaker Project
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build GameMaker Executable
+        uses: YoYoGames/GameMaker-Action@v1
+        with:
+          gms-version: '2026.0.0.23' # Matches your installed runtime version
+          target: 'VM'
+        env:
+          YY_USERNAME: ${{ secrets.GAMEMAKER_USERNAME }}
+          YY_PASSWORD: ${{ secrets.GAMEMAKER_PASSWORD }}
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: triple-t-build
+          path: build/
