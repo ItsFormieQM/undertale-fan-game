@@ -47,6 +47,9 @@ function scr_load(){
 	
 	file_text_readln(_file);
 	game_set_speed(_fps, gamespeed_fps)
+	
+	global.no_mus = bool(file_text_read_string(_file))
+    file_text_readln(_file);
     
     // Line 7: Read Saved Anti-Cheat Hash
     var _saved_hash = string_trim(file_text_read_string(_file));

@@ -79,7 +79,7 @@ if (instance_exists(obj_mouse_mark) && global.canmove == true) {
 var _gp_h = 0;
 var _gp_v = 0;
 
-if (global.using_gamepad && global.gamepad_id != -1) {
+if (global.using_gamepad && global.gamepad_id != -1) || global.osflavor == "PC" {
     var _axis_h = gamepad_axis_value(global.gamepad_id, gp_axislh);
     var _axis_v = gamepad_axis_value(global.gamepad_id, gp_axislv);
     
@@ -87,10 +87,10 @@ if (global.using_gamepad && global.gamepad_id != -1) {
     if (abs(_axis_v) > 0.2) _gp_v = _axis_v;
     
     if (_gp_h == 0 && _gp_v == 0) {
-        if (gamepad_button_check(global.gamepad_id, gp_padr)) _gp_h = 1;
-        if (gamepad_button_check(global.gamepad_id, gp_padl)) _gp_h = -1;
-        if (gamepad_button_check(global.gamepad_id, gp_padd)) _gp_v = 1;
-        if (gamepad_button_check(global.gamepad_id, gp_padu)) _gp_v = -1;
+        if (gamepad_button_check(global.gamepad_id, gp_padr) || keyboard_check(ord("D"))) _gp_h = 1;
+        if (gamepad_button_check(global.gamepad_id, gp_padl)|| keyboard_check(ord("A"))) _gp_h = -1;
+        if (gamepad_button_check(global.gamepad_id, gp_padd)|| keyboard_check(ord("S"))) _gp_v = 1;
+        if (gamepad_button_check(global.gamepad_id, gp_padu)|| keyboard_check(ord("W"))) _gp_v = -1;
     }
 }
 

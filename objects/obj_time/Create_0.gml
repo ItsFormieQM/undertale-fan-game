@@ -31,6 +31,8 @@ global.autorun = false
 global.show_solids = false
 global.is_fs = false
 global.no_mus = false
+global.typer_snd = snd_txt1
+global.sndtxt_delay = 1
 scr_ifnintendo()
 if os_type == os_windows || os_type == os_linux || os_type == os_macosx {
 	global.osflavor = "PC"

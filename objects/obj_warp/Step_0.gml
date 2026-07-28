@@ -1,4 +1,7 @@
-if is_locked != true {
+if !place_meeting(x,y,obj_ruinsdoor) {
+	is_locked = false
+}
+if is_locked == false {
 	if global.frame_rate == 30 {
 		global.stop_mus = _stop_mus
 		if place_meeting(x,y,obj_mainchara) && activated == false{

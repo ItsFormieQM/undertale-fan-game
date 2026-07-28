@@ -1,6 +1,8 @@
 var _oldcol = draw_get_colour();
 var _oldfont = draw_get_font();
 
+
+
 // Safety check for null/empty messages
 if (global.msg[i] == pointer_null) {
     instance_destroy();
@@ -12,19 +14,25 @@ var _msg_len = string_length(_text);
 
 draw_set_font(fnt_main);
 draw_set_colour(c_white);
-
-// --- State 1: Typing Out Message ---
+if ran == 0 {
+	char_index = 0;  
+	ran = 1
+	
+}
+// type shit - had to use a tutorial
 if (char_index < _msg_len) {
     timer++;
-    
-    // Skip to the end of the current line instantly
+	typer_timer++
+	if typer_timer >= global.sndtxt_delay {
+		scr_play_snd(global.typer_snd, 1.25, false)
+		typer_timer = 0
+	}
     if (global.interacted_x == 1) {
         char_index = _msg_len;
         _visible_text = _text;
         timer = 0;
         global.interacted_x = 0;
     } 
-    // Advance character on timer threshold
     else if (timer >= 1.7) {
         char_index++;
         _visible_text = string_copy(_text, 1, char_index);
@@ -33,11 +41,9 @@ if (char_index < _msg_len) {
     
     draw_text(175 - 55, 318, _visible_text);
 }
-// --- State 2: Message Fully Displayed ---
-else {
+else if (char_index >= _msg_len) {
     draw_text(175 - 55, 318, _text);
-    
-    // Advance to next message index
+    typer_timer = global.sndtxt_delay
     if (global.interacted == 1) {
         i++;
         char_index = 0;
@@ -46,6 +52,6 @@ else {
     }
 }
 
-// Restore old settings
+// restore
 draw_set_colour(_oldcol);
 draw_set_font(_oldfont);

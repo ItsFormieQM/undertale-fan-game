@@ -11,12 +11,15 @@ global.interacted = 0;
 con = 0;
 
 // Dialogue System Setup
-_text = []  
+//_text = []  
 timer = 0
-_visible_text = 0
+_visible_text = ""
 i = 0
+typer_timer = 0
 //i = 0// Current message index in global.msg
      // Store current text string
-char_index = 0;             // How many characters are currently visible
+char_index = "";             // How many characters are currently visible
 pause_timer = 0;            // Step counter
-pause_delay = 3;            // Steps between each character typing out (lower = faster)
+pause_delay = 3;  
+alarm[1] = 1// Steps between each character typing out (lower = faster)
+ran = 0

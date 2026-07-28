@@ -51,6 +51,9 @@ function scr_save(_instance){
 	//fps 
 	file_text_write_string(_file, string(global.frame_rate)); 
     file_text_writeln(_file);
+	//music
+	file_text_write_string(_file, string(global.no_mus)); 
+    file_text_writeln(_file);
     
     // Line 7: Create the validation hash using identical data ordering as scr_load
     var _secret_salt = "sub to tung tung sahur";
