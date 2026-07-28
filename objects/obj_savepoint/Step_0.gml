@@ -5,6 +5,7 @@ if (global.interacted == 1) && global.canmove == true {
     if (distance_to_object(obj_mainchara) <= _offset) {
         
         show_debug_message("save?");
+		global.msc = _message_counter
         
         // Find the nearest save mark and trigger the save script
         var _id = instance_nearest(x, y, obj_savemark);

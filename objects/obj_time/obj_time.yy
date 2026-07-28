@@ -12,8 +12,8 @@
   "name":"obj_time",
   "overriddenProperties":[],
   "parent":{
-    "name":"triple t",
-    "path":"triple t.yyp",
+    "name":"Son",
+    "path":"folders/Son.yy",
   },
   "parentObjectId":null,
   "persistent":true,

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_disable_mus",
   "parent":{
-    "name":"triple t",
-    "path":"triple t.yyp",
+    "name":"Son",
+    "path":"folders/Son.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

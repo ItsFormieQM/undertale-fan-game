@@ -1,3 +1,4 @@
+scr_dialogue()
 global.gamepad_id = -1;
 for (var i = 0; i < 12; i++) {
     if (gamepad_is_connected(i)) {

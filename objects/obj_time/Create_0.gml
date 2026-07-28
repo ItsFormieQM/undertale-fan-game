@@ -22,6 +22,7 @@ global.xp = 0
 global.genocide_route = 0
 global.frame_rate = 60 // might go unused 
 global.item = []
+global.msc = "0.0"
 touch_x = 0
 touch_y = 0
 global.is_nx = false
@@ -43,6 +44,7 @@ if global.osflavor == "Mobile" || os_type == os_android || os_type == os_ios{
 room_goto_next()
 // 1. Initialize an empty array at game launch
 global.warplist = [];
+global.door = []
 
 // 2. Push warp data into the array one after another
 // Slot [0]
