@@ -1,5 +1,8 @@
 // Initialize active scheme tracker globally if it doesn't exist yet
-
+scr_balance_stats()
+if global.frozen == true {
+	image_speed = 0
+}
 if (!variable_global_exists("using_gamepad")) global.using_gamepad = false;
 
 // --- STEP 1: HARDWARE & INPUT STATE DETECTION ---

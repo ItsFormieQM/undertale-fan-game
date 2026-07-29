@@ -23,7 +23,7 @@ if opened_stat == 1 {
 	}
 	if scr_next_lv(global.lv) != "Proceed" {
 		draw_text(_accountx + 110, _accounty + 45 + 35, "LV  " + string(global.lv))
-		draw_text(_accountx + 110, _accounty + 45 + 50, "HP  " + string(global.hp) + "  /  " + string(global.maxhp))
+		draw_text(_accountx + 110, _accounty + 45 + 50, "HP  " + string(global.hp) + "  /  " + string(global.max_hp))
 		draw_text(_accountx + 110, _accounty + 45 + 80, "AT   " + string(global.atk) + "  (" + string(global.atk / 10) + ")")
 		draw_text(_accountx + 110, _accounty + 45 + 95, "DF   " + string(global.def) + "  (" + string(global.def - 10) + ")")
 		draw_text(_accountx + 110 + 75, _accounty + 45 + 80, "EXP: " + string(global.xp))
@@ -97,26 +97,26 @@ if opened_sett == 1 {
 		draw_set_colour(c_white)
 	}
 	if global.no_mus == false {
-		draw_text(_accountx + 120, _accounty + 95 + 45, "MUSIC: True")
+		draw_text(_accountx + 120, _accounty + 125, "MUSIC: True")
 	}
 	else {
-		draw_text(_accountx + 120, _accounty + 95 + 45, "MUSIC: False")
+		draw_text(_accountx + 120, _accounty + 125, "MUSIC: False")
 	}
 	 
-	if global.frame_rate == 30 && global.osflavor != "Mobile"{
-		draw_text(_accountx + 120, _accounty + 125 , "FPS: 30")
-	}
-	else if global.frame_rate == 60 && global.osflavor != "Mobile" {
-		draw_text(_accountx + 120, _accounty + 125 , "FPS: 60")
-	}
-	else if global.frame_rate == 120 && global.osflavor != "Mobile" {
-		draw_text(_accountx + 120, _accounty + 125 , "FPS: 120")
-	}
-	else if global.osflavor == "Mobile" {
-		draw_set_colour(c_grey)
-		draw_text(_accountx + 120, _accounty + 125 , "FPS: 60")
-		draw_set_colour(c_white)
-	}
+	//if global.frame_rate == 30 && global.osflavor != "Mobile"{
+	//	draw_text(_accountx + 120, _accounty + 125 , "FPS: 30")
+	//}
+	//else if global.frame_rate == 60 && global.osflavor != "Mobile" {
+	//	draw_text(_accountx + 120, _accounty + 125 , "FPS: 60")
+	//}
+	//else if global.frame_rate == 120 && global.osflavor != "Mobile" {
+	//	draw_text(_accountx + 120, _accounty + 125 , "FPS: 120")
+	//}
+	//else if global.osflavor == "Mobile" {
+	//	draw_set_colour(c_grey)
+	//	draw_text(_accountx + 120, _accounty + 125 , "FPS: 60")
+	//	draw_set_colour(c_white)
+	//}
 	
 	
 }

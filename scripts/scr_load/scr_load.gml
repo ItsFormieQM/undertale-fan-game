@@ -1,4 +1,42 @@
 function scr_load(){
+	global.died = false
+	//global.l_held = 0
+	//global.osflavor = 0
+	//global.sp = 0.85
+	//global.canmove = true
+	//global.is_fs = false
+	//global.interacted = 0
+	//global.msg = [];
+	//global.current_song = 0
+	//global.enctimer = 0
+	//global.debug = true
+	//global.interacted_c = 0
+	//global.spdex = 1
+	//global.l_click = 0
+	//global.interacted_x = 0
+	//global.lv = 1
+	//global.hp = 20
+	//global.maxhp = global.hp
+	//global.max_hp = global.maxhp
+	//global.atk = 10
+	//global.def = 10
+	//global.xp = 0
+	//global.genocide_route = 0
+	//global.frame_rate = 60 // might go unused 
+	//global.item = []
+	//global.msc = "0.0"
+	////touch_x = 0
+	////touch_y = 0
+	//global.is_nx = false
+	//global.gamepad_id = -1
+	//global.autorun = false
+	//global.show_solids = false
+	//global.is_fs = false
+	//global.no_mus = false
+	//global.typer_snd = snd_txt1
+	//global.sndtxt_delay = 1
+	//global.frozen = false
+	//global.door = []
     var _file_name = "savedata.txt";
     
     // 1. Safety check
@@ -6,7 +44,7 @@ function scr_load(){
         show_debug_message("Warning: No savedata.txt file found.");
         return false;
     }
-    
+    global.canmove = true
     // 2. Open the file for READING
     var _file = file_text_open_read(_file_name);
     
@@ -99,5 +137,8 @@ function scr_load(){
         }
     }
     scr_genocide_init()
+	global.title_card = false
+	global.died = false
+	obj_invincibilty_controller.ran = 0
     exit;
 }

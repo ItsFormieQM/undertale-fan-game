@@ -12,7 +12,7 @@ global.interacted_c = 0
 global.spdex = 1
 global.l_click = 0
 global.interacted_x = 0
-global.lv = 11
+global.lv = 1
 global.hp = 20
 global.maxhp = global.hp
 global.max_hp = global.maxhp
@@ -33,6 +33,9 @@ global.is_fs = false
 global.no_mus = false
 global.typer_snd = snd_txt1
 global.sndtxt_delay = 1
+global.frozen = false
+global.door = []
+
 scr_ifnintendo()
 if os_type == os_windows || os_type == os_linux || os_type == os_macosx {
 	global.osflavor = "PC"
@@ -54,6 +57,7 @@ global.door = []
 for (var i = 0; i < 1024; i++) {
     global.warplist[i] = pointer_null;
 	global.msg[i] = pointer_null;
+	global.door[i] = pointer_null
 }
 for (var i = 0; i < array_length(global.item); i++) {
 	global.item[i] = pointer_null
@@ -80,6 +84,7 @@ global.item[4] = "item_memories"
 global.item[5] = "item_hopesanddreams"
 global.item[6] = pointer_null
 global.item[7] = pointer_null
+irannow = 0
 
 scr_get_itemlist()
 

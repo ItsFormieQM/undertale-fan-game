@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_flowery3_ph",
   "parent":{
-    "name":"triple t",
-    "path":"triple t.yyp",
+    "name":"Son",
+    "path":"folders/Son.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

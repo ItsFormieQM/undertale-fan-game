@@ -6,6 +6,7 @@ if (global.interacted == 1) && global.canmove == true {
         
         show_debug_message("save?");
 		global.msc = _message_counter
+		global.hp = global.max_hp
         
         // Find the nearest save mark and trigger the save script
         var _id = instance_nearest(x, y, obj_savemark);

@@ -286,9 +286,9 @@ if opened_sett == 1 {
         }
 		else if opened_sett_box == 4 {
 			scr_play_snd(snd_movemenu, 1.25, false);
-            obj_menuheart.y = _accounty + 133.5 + 15.5;
+            obj_menuheart.y = _accounty + 88.5;
             obj_menuheart.x = _accountx + 110; 
-            opened_sett_box = 5;
+            opened_sett_box = 1;
 		}
 		else if opened_sett_box == 5 {
 			scr_play_snd(snd_movemenu, 1.25, false);
@@ -322,9 +322,9 @@ if opened_sett == 1 {
         }
 		else if opened_sett_box == 4 {
 			scr_play_snd(snd_movemenu, 1.25, false);
-            obj_menuheart.y = _accounty + 133.5 + 15.5;
+			obj_menuheart.y = _accounty + 88.5;
             obj_menuheart.x = _accountx + 110; 
-            opened_sett_box = 5;
+            opened_sett_box = 1;
 		}
 		else if opened_sett_box == 5 {
 			scr_play_snd(snd_movemenu, 1.25, false);
@@ -370,37 +370,37 @@ if opened_sett == 1 {
 			}
         }
     }
+	//else if opened_sett_box == 4 {
+		
+	//	if global.interacted == 1 {
+	//		global.interacted = 0
+	//		if global.osflavor != "Mobile"  {
+	//			if sel = 0 { // 0 is 60
+	//				game_set_speed(120,gamespeed_fps)
+	//				sel = 1
+	//				scr_play_snd(snd_select, 1.25, false);
+	//				global.interacted = 0
+	//			}
+	//			else if sel = 1 { // 1 is 120
+	//				game_set_speed(30,gamespeed_fps)
+	//				scr_play_snd(snd_select, 1.25, false);
+	//				sel = 2
+	//				global.interacted = 0
+	//			}
+	//			else if sel = 2 { 
+	//				game_set_speed(60,gamespeed_fps)
+	//				scr_play_snd(snd_select, 1.25, false);
+	//				sel = 0
+	//				global.interacted = 0
+	//			}
+	//		}
+	//		else {
+	//			scr_play_snd(snd_cantselect, 1.55, false);
+	//		}
+	//	}
+		
+	//}
 	else if opened_sett_box == 4 {
-		
-		if global.interacted == 1 {
-			global.interacted = 0
-			if global.osflavor != "Mobile"  {
-				if sel = 0 { // 0 is 60
-					game_set_speed(120,gamespeed_fps)
-					sel = 1
-					scr_play_snd(snd_select, 1.25, false);
-					global.interacted = 0
-				}
-				else if sel = 1 { // 1 is 120
-					game_set_speed(30,gamespeed_fps)
-					scr_play_snd(snd_select, 1.25, false);
-					sel = 2
-					global.interacted = 0
-				}
-				else if sel = 2 { 
-					game_set_speed(60,gamespeed_fps)
-					scr_play_snd(snd_select, 1.25, false);
-					sel = 0
-					global.interacted = 0
-				}
-			}
-			else {
-				scr_play_snd(snd_cantselect, 1.55, false);
-			}
-		}
-		
-	}
-	else if opened_sett_box == 5 {
 		if global.interacted == 1 {
 			scr_play_snd(snd_select, 1.25, false);
 			sel = 0

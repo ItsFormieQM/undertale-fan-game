@@ -28,6 +28,6 @@ else if global.frame_rate == 120 {
 instance_create_layer(_accountx + 32.5,_accounty + 99.5,"BATTLE", obj_menuheart)
 scr_play_snd(snd_movemenu, 1.25, false)
 obj_mainchara.image_index = 0
-scr_balance_stats()
+
 up_press = 0
 down_press = 0
