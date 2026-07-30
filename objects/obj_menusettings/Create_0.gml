@@ -1,5 +1,6 @@
 global.canmove = false
 global.menumode = true
+justdont = 0
 
 menu_first = 1
 _accountx = camera_get_view_x(view_camera[0]);

@@ -18,3 +18,4 @@ if ran == 2 && proceed == 1 {
 		show_debug_message("proceed")
 	}
 }
+obj_harm_controller.near_harm = 0

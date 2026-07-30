@@ -1,4 +1,7 @@
 // Initialize active scheme tracker globally if it doesn't exist yet
+
+
+
 scr_balance_stats()
 if global.frozen == true {
 	image_speed = 0

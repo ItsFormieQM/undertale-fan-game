@@ -17,6 +17,7 @@ _target_y = clamp(_target_y, 0, room_height - _cam_h);
 //global.interacted_x = 0
 // 5. Apply the finalized position to the camera view bounds
 camera_set_view_pos(_cam, _target_x, _target_y);
+
 scr_genocide_init()
 
 global.l_held = 0

@@ -1,4 +1,5 @@
 ran = 0
+
 // FIX 1: Remove the room restriction so buttons exist in ALL areas on mobile
 if (global.osflavor == "Mobile") {
     

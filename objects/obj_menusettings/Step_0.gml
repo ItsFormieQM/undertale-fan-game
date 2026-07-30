@@ -1,6 +1,7 @@
 // --- STEP 1: DESTROY MENU IF FADING ---
-if instance_exists(obj_fader) {
+if instance_exists(obj_fader) && global.died == true {
     instance_destroy(obj_menusettings);
+	justdont = 1
 }
 
 // --- STEP 2: GET CAMERA POSITION ---

@@ -5,7 +5,7 @@ function scr_encounter_success(){
 		if !instance_exists(obj_exclamation) {
 			instance_create_layer(self.x,self.y - 30,"INSTANCES", obj_exclamation)
 		}
-		alarm[0] = 30
+		//alarm[0] = 30
 	}
 	global.enctimer = 0
 }
