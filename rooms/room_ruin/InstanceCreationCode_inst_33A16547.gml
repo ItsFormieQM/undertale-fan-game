@@ -1,1 +1,0 @@
-warpto = global.warplist[0]

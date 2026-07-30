@@ -1,1 +1,0 @@
-irannow = 0
