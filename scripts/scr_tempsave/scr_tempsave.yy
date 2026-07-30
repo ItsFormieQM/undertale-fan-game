@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_tempsave",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_tempsave",
+  "parent":{
+    "name":"Son",
+    "path":"folders/Son.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

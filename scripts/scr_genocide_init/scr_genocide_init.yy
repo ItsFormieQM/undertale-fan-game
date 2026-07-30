@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_genocide_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_genocide_init",
+  "parent":{
+    "name":"Son",
+    "path":"folders/Son.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

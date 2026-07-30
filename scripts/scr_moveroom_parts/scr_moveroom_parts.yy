@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_moveroom_parts",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_moveroom_parts",
+  "parent":{
+    "name":"Son",
+    "path":"folders/Son.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
