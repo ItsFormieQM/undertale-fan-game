@@ -23,12 +23,12 @@ if ran == 0 {
 if (char_index < _msg_len) {
     timer++;
 	typer_timer++
-	if typer_timer >= global.sndtxt_delay {
+	if typer_timer >= global.sndtxt_delay { // for snd effects
 		scr_play_snd(global.typer_snd, 1.25, false)
 		typer_timer = 0
 	}
-    if (global.interacted_x == 1) {
-        char_index = _msg_len;
+    if (global.interacted_x == 1) { // if z press
+        char_index = _msg_len; 
         _visible_text = _text;
         timer = 0;
         global.interacted_x = 0;

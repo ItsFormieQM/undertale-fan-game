@@ -1,10 +1,9 @@
 function scr_disable_mus(){
-	
-	if audio_is_playing(snd_ruins) && global.no_mus == true {
-		audio_sound_gain(snd_ruins,0,0)
+	// old dumb me wrote ts to be more messy
+	if audio_is_playing(global.current_song) && global.no_mus {
+		audio_sound_gain(global.current_song,0,0)
 	}
-	else if global.no_mus == false {
-		audio_sound_gain(snd_ruins,1,0)
+	else if !global.no_mus {
+		audio_sound_gain(global.current_song,1,0)
 	}
-	
 }

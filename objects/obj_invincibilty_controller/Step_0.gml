@@ -1,5 +1,5 @@
 
-show_debug_message(global.damage_took)
+//show_debug_message(global.damage_took)
 
 
 

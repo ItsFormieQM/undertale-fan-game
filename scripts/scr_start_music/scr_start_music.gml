@@ -1,4 +1,4 @@
-function scr_start_music(music, vol, loop){
+function scr_start_music(music, vol, loop = true){
 	var priority = 67
 	var add_vol
 	

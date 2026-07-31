@@ -35,7 +35,8 @@ global.typer_snd = snd_txt1
 global.sndtxt_delay = 1
 global.frozen = false
 global.door = []
-
+global.battle_mus = 0
+global.battle_vol = 0
 scr_ifnintendo()
 if os_type == os_windows || os_type == os_linux || os_type == os_macosx {
 	global.osflavor = "PC"
@@ -46,7 +47,7 @@ if global.osflavor == "Mobile" || os_type == os_android || os_type == os_ios{
 }
 
 
-room_goto_next()
+
 // 1. Initialize an empty array at game launch
 global.warplist = [];
 global.door = []
@@ -85,7 +86,7 @@ global.item[5] = "item_hopesanddreams"
 global.item[6] = pointer_null
 global.item[7] = pointer_null
 irannow = 0
-
+room_goto_next()
 scr_get_itemlist()
 
 

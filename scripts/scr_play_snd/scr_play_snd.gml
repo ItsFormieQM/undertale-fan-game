@@ -1,4 +1,4 @@
-function scr_play_snd(snd, vol, loop){
+function scr_play_snd(snd, vol, loop = false){
 	loop = false
 	if global.osflavor == "Mobile" {
 		audio_play_sound(snd,67,loop)
