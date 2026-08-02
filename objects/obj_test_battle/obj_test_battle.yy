@@ -9,8 +9,8 @@
   "name":"obj_test_battle",
   "overriddenProperties":[],
   "parent":{
-    "name":"triple t",
-    "path":"triple t.yyp",
+    "name":"Son",
+    "path":"folders/Son.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -26,7 +26,10 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"_battlegroup","filters":[],"listItems":[],"multiselect":false,"name":"_battlegroup","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"froggit_solo","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"_lv_amnt","filters":[],"listItems":[],"multiselect":false,"name":"_lv_amnt","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

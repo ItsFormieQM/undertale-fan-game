@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_midbattle_convo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_midbattle_convo",
+  "parent":{
+    "name":"Battle",
+    "path":"folders/Battle.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

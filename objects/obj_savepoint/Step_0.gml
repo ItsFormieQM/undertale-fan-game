@@ -15,6 +15,9 @@ if (global.interacted == 1) && global.canmove == true {
         }
 		
 		if !instance_exists(obj_dialogue){
+			if global.genocide_route != 0 {
+				global.save_point_convo++
+			}
 			scr_play_snd(snd_heal, 1.25, false)
 			instance_create_layer(0,0,"TECHNICAL",obj_dialogue)
 		}

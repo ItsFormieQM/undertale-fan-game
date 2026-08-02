@@ -4,6 +4,6 @@ function scr_disable_mus(){
 		audio_sound_gain(global.current_song,0,0)
 	}
 	else if !global.no_mus {
-		audio_sound_gain(global.current_song,1,0)
+		audio_sound_gain(global.current_song,1.5,0)
 	}
 }

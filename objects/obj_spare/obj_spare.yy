@@ -6,8 +6,8 @@
   "name":"obj_spare",
   "overriddenProperties":[],
   "parent":{
-    "name":"triple t",
-    "path":"triple t.yyp",
+    "name":"Son",
+    "path":"folders/Son.yy",
   },
   "parentObjectId":null,
   "persistent":false,

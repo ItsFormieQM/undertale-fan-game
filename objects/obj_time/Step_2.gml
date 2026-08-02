@@ -134,6 +134,7 @@ if (room == room_ruin && instance_exists(obj_start)) {
 }
 
 
-scr_genocide_init()
-
+//if global.no_mus {
+//	scr_disable_mus()
+//}
 scr_disable_mus()

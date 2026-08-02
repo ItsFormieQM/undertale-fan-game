@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_empty_town",
   "parent":{
-    "name":"Son",
-    "path":"folders/Son.yy",
+    "name":"Deltarune Music",
+    "path":"folders/Battle/Deltarune Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

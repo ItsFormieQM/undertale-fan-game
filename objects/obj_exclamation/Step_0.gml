@@ -5,18 +5,24 @@ if timer == 30 {
 	scr_stop_mus(global.current_song)
 	if !instance_exists(obj_heartbattle_actual) && !instance_exists(obj_flashblack){
 		instance_create_layer(obj_mainchara.x, obj_mainchara.y,"BATTLE", obj_heartbattle_actual)
-		instance_create_layer(obj_mainchara.x, obj_mainchara.y,"BATTLE", obj_flashblack)
+		instance_create_layer(obj_mainchara.x, obj_mainchara.y,"SUBCHARA", obj_flashblack)
 	}
 	obj_flashblack.image_alpha = 1
 	obj_heartbattle_actual.image_alpha = 1
 }
-
+if timer == 34 {
+	obj_heartbattle_actual.image_alpha = 0
+}
 if timer == 38 {
 	scr_play_snd(snd_noise, 1.25)
 	//if !instance_exists(obj_heartbattle_actual) {
 	//	instance_create_layer(obj_mainchara.x, obj_mainchara.y,"BATTLE", obj_heartbattle_actual)
 	//}
-	obj_flashblack.image_alpha = 0
+	
+	obj_flashblack.image_alpha = 1
+	obj_heartbattle_actual.image_alpha = 1
+}
+if timer == 44 {
 	obj_heartbattle_actual.image_alpha = 0
 }
 if timer == 46 {
@@ -24,14 +30,20 @@ if timer == 46 {
 	//if !instance_exists(obj_heartbattle_actual) {
 	//	instance_create_layer(obj_mainchara.x, obj_mainchara.y,"BATTLE", obj_heartbattle_actual)
 	//}
+	
 	obj_flashblack.image_alpha = 1
 	obj_heartbattle_actual.image_alpha = 1
 }
+if timer == 50 {
+	obj_heartbattle_actual.image_alpha = 0
+}
 if timer ==  54{
 	scr_play_snd(snd_bstart, 1.25)
+	obj_mainchara.visible = false
 	//if !instance_exists(obj_heartbattle_actual) {
 	//	instance_create_layer(obj_mainchara.x, obj_mainchara.y,"BATTLE", obj_heartbattle_actual)
 	//}
+	
 	obj_flashblack.image_alpha = 1
 	obj_heartbattle_actual.image_alpha = 1
 	

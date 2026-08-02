@@ -6,8 +6,8 @@
   "name":"obj_act",
   "overriddenProperties":[],
   "parent":{
-    "name":"triple t",
-    "path":"triple t.yyp",
+    "name":"Battle",
+    "path":"folders/Battle.yy",
   },
   "parentObjectId":null,
   "persistent":false,

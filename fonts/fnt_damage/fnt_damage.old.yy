@@ -119,8 +119,8 @@
   "maintainGms1Font":false,
   "name":"fnt_damage",
   "parent":{
-    "name":"triple t",
-    "path":"triple t.yyp",
+    "name":"Son",
+    "path":"folders/Son.yy",
   },
   "pointRounding":0,
   "ranges":[

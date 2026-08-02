@@ -1,2 +1,10 @@
+global.a_pressed = 0
+global.d_pressed = 0
 box = 0
+abouttofight = 0
+enemy_name = 0
 image_speed = 0
+abouttocheck = 0
+writeforcheckk = 0
+isfighting = 0
+isoccupied = 0

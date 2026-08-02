@@ -119,8 +119,8 @@
   "maintainGms1Font":false,
   "name":"fnt_damage",
   "parent":{
-    "name":"Son",
-    "path":"folders/Son.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "pointRounding":0,
   "ranges":[

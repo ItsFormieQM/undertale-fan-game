@@ -44,8 +44,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"triple t",
-    "path":"triple t.yyp",
+    "name":"Battle",
+    "path":"folders/Battle.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

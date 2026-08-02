@@ -1,5 +1,5 @@
 // --- STEP 1: DESTROY MENU IF FADING ---
-if instance_exists(obj_fader) && global.died == true {
+if instance_exists(obj_fader) || global.died == true {
     instance_destroy(obj_menusettings);
 	justdont = 1
 }
@@ -407,6 +407,7 @@ if opened_sett == 1 {
 			sel = 0
 			global.interacted = 0
 			global.no_mus = !global.no_mus
+			scr_disable_mus()
 		}
 	}
 }

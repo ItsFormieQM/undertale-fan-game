@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_froggit_torso_en",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_froggit_torso_en",
   "overriddenProperties":[],
@@ -9,7 +11,10 @@
     "name":"Froggit",
     "path":"folders/Froggit.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_froggit_enemy",
+    "path":"objects/obj_froggit_enemy/obj_froggit_enemy.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

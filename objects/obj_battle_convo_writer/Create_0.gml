@@ -1,0 +1,11 @@
+startdrawing = 1
+char_index = 0
+timer_txt = 0
+timer_snd = 0
+ran = 0
+visible_txt = ""
+extras = 0
+global.battle_convo_amnt = 0
+i = 1
+_convo = ""
+global.canmove = false

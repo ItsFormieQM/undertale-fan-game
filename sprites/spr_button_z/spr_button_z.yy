@@ -40,8 +40,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Son",
-    "path":"folders/Son.yy",
+    "name":"triple t",
+    "path":"triple t.yyp",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

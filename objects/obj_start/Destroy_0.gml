@@ -12,3 +12,8 @@ if !file_exists("savedata.txt") {
 	global.current_song = 0
 	scr_tempsave()
 }
+if instance_exists(obj_battlemarker) {
+	obj_mainchara.x = obj_battlemarker.x
+	obj_mainchara.y = obj_battlemarker.y
+	instance_destroy(obj_battlemarker)
+}

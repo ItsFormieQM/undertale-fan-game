@@ -24,6 +24,7 @@ if (_my_target != pointer_null && instance_exists(_my_target)) {
 	else if global.frame_rate == 30 {
 		alarm[2] = 7 / 2
 	}
-} else {
-    show_debug_message("Error: Warp slot target marker not found!");
 }
+//} else {
+//    show_debug_message("Error: Warp slot target marker not found!");
+//}

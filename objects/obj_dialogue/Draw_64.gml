@@ -2,11 +2,9 @@ var _oldcol = draw_get_colour();
 var _oldfont = draw_get_font();
 
 
-
-// Safety check for null/empty messages
 if (global.msg[i] == pointer_null) {
     instance_destroy();
-    exit; // Stop drawing if destroyed
+    exit; // die
 }
 
 var _text = global.msg[i];

@@ -12,7 +12,7 @@ function scr_load(){
 	global.msg = [];
 	global.current_song = 0
 	global.enctimer = 0
-	global.debug = true
+	//global.debug = true
 	global.interacted_c = 0
 	global.spdex = 1
 	global.l_click = 0
@@ -125,7 +125,7 @@ function scr_load(){
     file_text_readln(_file); // Advance to line 6
 	
 	// Line 6: Set Genocide Status
-	global.genocide_route = bool(file_text_read_string(_file))
+	global.genocide_route = real(file_text_read_string(_file))
     file_text_readln(_file);
 	
 	global.autorun = bool(file_text_read_string(_file))
@@ -159,7 +159,7 @@ function scr_load(){
     // 5. Flip variable based on verification results
     if (_saved_hash != _calculated_hash) {
         global.file_tampered = true;
-        show_message("Tampering detected!");
+		show_debug_message("TAMPERED FILE.");
     } else {
         global.file_tampered = false;
         show_debug_message("File is clean.");
@@ -187,14 +187,13 @@ function scr_load(){
     var _music_asset = asset_get_index(_loaded_mus);
     if (audio_exists(_music_asset)) {
         global.current_song = _music_asset;
-        if (!audio_is_playing(global.current_song)) {
-            audio_stop_all();
-            audio_play_sound(global.current_song, 67, true);
-        }
+        audio_stop_all();
+        scr_start_music(global.current_song, 1.25, true)
     }
     scr_genocide_init()
 	global.title_card = false
 	global.died = false
 	obj_invincibilty_controller.ran = 0
+	
     exit;
 }

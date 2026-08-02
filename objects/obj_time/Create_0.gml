@@ -7,7 +7,7 @@ global.interacted = 0
 global.msg = [];
 global.current_song = 0
 global.enctimer = 0
-global.debug = true
+global.debug = false
 global.interacted_c = 0
 global.spdex = 1
 global.l_click = 0
@@ -37,6 +37,8 @@ global.frozen = false
 global.door = []
 global.battle_mus = 0
 global.battle_vol = 0
+global.battle_msg = []
+global.soulmode = "red"
 scr_ifnintendo()
 if os_type == os_windows || os_type == os_linux || os_type == os_macosx {
 	global.osflavor = "PC"
@@ -59,6 +61,7 @@ for (var i = 0; i < 1024; i++) {
     global.warplist[i] = pointer_null;
 	global.msg[i] = pointer_null;
 	global.door[i] = pointer_null
+	global.battle_msg[i] = pointer_null
 }
 for (var i = 0; i < array_length(global.item); i++) {
 	global.item[i] = pointer_null
@@ -88,8 +91,40 @@ global.item[7] = pointer_null
 irannow = 0
 room_goto_next()
 scr_get_itemlist()
-
-
+global.typer_snd_b = 0
+global.enemy_name = []
+global.enemy_inst = []
+global.enemy_hp = []
+for (var i = 0; i < 4; i++) {
+	global.enemy_name[i] = "cohort"
+	global.enemy_inst[i] = pointer_null
+	global.enemy_hp[i] = 0
+} 
+global.enemy_part1 = []
+global.enemy_part2 = []
+for (var i = 0; i < 4; i++) {
+	global.enemy_part1[i] = pointer_null
+	global.enemy_part2[i] = pointer_null
+} 
+global.prev_room = 0
+global.save_point_convo = 0
+global.no_bg = 0
+global.custom_bg = 0
+global.txtchange_genocide = 0
+global.always_miss = 0
+global.check_dialogue_type = 0
+global.check_dialogue = []
+global.bconvo = []
+global.bfont = fnt_main
+for (var i = 0; i < 32; i++) {
+	global.check_dialogue[i] = 0
+}
+global.sndtxt_delay = 0
+global.txt_delay = 0
+global.battle_convo_amnt = 0
+global.amount_of_pages_to_be_seen_battle = 0
+global.typer_snd_convob = 0
+global.sndtxt_delay_convob = 0
 
 
 

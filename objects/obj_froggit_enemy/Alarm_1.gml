@@ -1,0 +1,1 @@
+scr_play_snd(snd_hurt_en1, 1.25)

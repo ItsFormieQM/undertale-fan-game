@@ -6,4 +6,11 @@ function scr_stop_mus(mus){
 		obj_mus_manager.mus = mus
 		global.current_song = 0
 	}
+	if room == room_battle {
+		audio_sound_gain(mus, 0, 0);
+		instance_create_layer(0,0,"TECHNICAL", obj_mus_manager)
+		obj_mus_manager.alarm[0] = 15
+		obj_mus_manager.mus = mus
+		global.current_song = 0
+	}
 }

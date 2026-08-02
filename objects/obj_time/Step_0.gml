@@ -10,6 +10,7 @@ if global.osflavor == "Mobile" {
 	game_set_speed(60,gamespeed_fps)
 }
 if global.hp <= 0 && room != room_battle && irannow = 0{
-	
 	irannow = 1
 }
+//if audio_is_playing(mus_tv_world) {
+//}
