@@ -8,4 +8,4 @@ visible_txt = ""
 audio_channel_num(1024)
 extras = 1
 writeforcheck = 1
-global.canmove = false
+global.can_move_soul = false

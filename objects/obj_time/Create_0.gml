@@ -22,6 +22,7 @@ global.xp = 0
 global.genocide_route = 0
 global.frame_rate = 60 // might go unused 
 global.item = []
+global.current_mus_vol = 0
 global.msc = "0.0"
 touch_x = 0
 touch_y = 0
@@ -47,6 +48,7 @@ if global.osflavor == "Mobile" || os_type == os_android || os_type == os_ios{
 	global.osflavor = "Mobile"
 	
 }
+global.ismoving = false
 
 
 
@@ -125,7 +127,7 @@ global.battle_convo_amnt = 0
 global.amount_of_pages_to_be_seen_battle = 0
 global.typer_snd_convob = 0
 global.sndtxt_delay_convob = 0
-
+global.can_move_soul = false
 
 
 

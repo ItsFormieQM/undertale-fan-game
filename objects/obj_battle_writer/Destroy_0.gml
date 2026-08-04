@@ -1,1 +1,1 @@
-global.canmove = true
+global.can_move_soul = true

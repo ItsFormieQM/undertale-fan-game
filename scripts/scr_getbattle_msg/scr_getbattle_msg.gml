@@ -1,4 +1,7 @@
 function scr_getbattle_msg(){
+	for (var i = 0; i < 257; i++) {
+		global.battle_msg[i] = pointer_null
+	}
 	switch global.battlegroup {
 		case "Froggit":
 			if global.genocide_route == 0 {

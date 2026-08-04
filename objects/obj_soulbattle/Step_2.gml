@@ -13,24 +13,31 @@ if ran == 0 {
 	}
 }
 #endregion
-if global.canmove {
+
+
+if global.can_move_soul {
 	if _soulmode == "red" {
 		#region WASD && FOR RED SOUL
 		if global.w_held && !place_meeting(x,y - 1,obj_borderline){
 			y -= _sp	
+			
 		}
 		if global.s_held && !place_meeting(x,y + 1,obj_borderline) && !place_meeting(x,y + 1, obj_ground){
 			y += _sp
+			
 		}
 		if global.d_held && !place_meeting(x + 1,y,obj_borderline){
 			x += _sp
+			
 		}
 		if global.a_held && !place_meeting(x - 1,y,obj_borderline){
 			x -= _sp
+			
 		}
 		#endregion
 	}
 	if _soulmode == "blue" {
+		
 		var _delay = 40
 		if global.w_released {
 			blue_timer = 50
@@ -51,6 +58,7 @@ if global.canmove {
 		if !place_meeting(x,y + 1, obj_ground) && (!global.w_held|| blue_timer >= _delay) {
 			gravity = global.bluesoul_gravity
 			blue_timer = 50
+			
 		}
 		
 		if global.w_held && blue_timer < _delay{
@@ -63,9 +71,11 @@ if global.canmove {
 		//}
 		if global.d_held && !place_meeting(x + 1,y,obj_borderline){
 			x += _sp
+			
 		}
 		if global.a_held && !place_meeting(x - 1,y,obj_borderline){
 			x -= _sp
+			
 		}
 	}
 }

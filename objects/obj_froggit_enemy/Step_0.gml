@@ -40,5 +40,5 @@ if global.battle_msg[0] == "* You Won!" {
 }
 if obj_battle_controller.attempted_fight == 1 {
 	obj_battle_controller.startattacking = 1
-	global.canmove = true
+	global.can_move_soul = true
 }

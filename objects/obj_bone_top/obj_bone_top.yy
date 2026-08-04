@@ -9,8 +9,8 @@
   "name":"obj_bone_top",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bullet Patterns",
-    "path":"folders/Sans/Bullet Patterns.yy",
+    "name":"Normal",
+    "path":"folders/Sans/Bullet Patterns/Normal.yy",
   },
   "parentObjectId":{
     "name":"obj_bone_controller",

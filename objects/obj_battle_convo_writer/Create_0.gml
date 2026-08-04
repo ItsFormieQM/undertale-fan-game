@@ -8,4 +8,4 @@ extras = 0
 global.battle_convo_amnt = 0
 i = 1
 _convo = ""
-global.canmove = false
+global.can_move_soul = false

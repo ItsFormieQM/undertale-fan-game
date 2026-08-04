@@ -1,4 +1,5 @@
 function scr_load(){
+	
 	if instance_exists(obj_blackscreen) {
 		instance_destroy(obj_blackscreen)
 	}
@@ -173,7 +174,7 @@ function scr_load(){
         show_debug_message("LOAD ERROR: Room asset not found: " + string(_loaded_room));
         return false;
     }
-    
+    audio_stop_all();
     // 7. Pass data to game state variables
     global.target_x = real(_loaded_x);
     global.target_y = real(_loaded_y);
@@ -187,7 +188,7 @@ function scr_load(){
     var _music_asset = asset_get_index(_loaded_mus);
     if (audio_exists(_music_asset)) {
         global.current_song = _music_asset;
-        audio_stop_all();
+        
         scr_start_music(global.current_song, 1.25, true)
     }
     scr_genocide_init()

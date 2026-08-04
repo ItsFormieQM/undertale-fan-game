@@ -8,4 +8,5 @@ if !place_meeting(x - 2,y,obj_battle_border) {
 	//obj_bone_controller.i += 1
 	//show_debug_message("CLEANED: " + string(obj_bone_controller.i))
 }
+event_inherited()
 

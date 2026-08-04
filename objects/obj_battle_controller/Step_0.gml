@@ -105,7 +105,7 @@ if currently_fighting == 1 && startattacking == 1{
 if global.enemy_hp[0] <= 0 {
 	end_battle_violently = 1 
 	if global.interacted == 1 {
-		global.canmove = true
+		global.can_move_soul = true
 		global.interacted = 0
 		room_goto(global.prev_room)
 		obj_mainchara.visible = true
